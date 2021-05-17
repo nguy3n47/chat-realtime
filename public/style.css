@@ -86,7 +86,6 @@ ul {
 /* Chat page */
 
 .chat.page {
-  display: none;
 }
 
 /* Font */
@@ -101,9 +100,10 @@ ul {
 
 .log {
   color: gray;
-  font-size: 70%;
+  font-size: 100%;
   margin: 5px;
   text-align: center;
+  padding-bottom: 25px;
 }
 
 /* Messages */
@@ -120,21 +120,44 @@ ul {
   padding: 10px 20px 10px 20px;
 }
 
-.message.typing .messageBody {
+.typing {
   color: gray;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  padding-bottom: 25px;
+}
+
+.messageBody {
+  color: gray;
+  font-weight: 50;
+  font-size: 18px;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  display: block;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  text-align: justify;
 }
 
 .username {
   font-weight: 700;
-  overflow: hidden;
-  padding-right: 15px;
-  text-align: right;
+  padding-left: 5px;
 }
 
 /* Input */
 
 .inputMessage {
-  border: 10px solid #000;
+  border: 0px solid #000;
+  border-top: 3px solid #000;
   bottom: 0;
   height: 60px;
   left: 0;

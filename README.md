@@ -82,7 +82,7 @@ io.on("connection", (socket) => {
   "version": "1.0.0",
   "description": "A simple chat client using socket.io",
   "main": "index.js",
-  "author": "Nguyen Dev",
+  "author": "Nguyen",
   "private": true,
   "license": "MIT",
   "dependencies": {
@@ -128,7 +128,7 @@ server.listen(port, () => {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Socket.IO Chat App</title>
+    <title>Socket.IO Chat Example</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -139,16 +139,11 @@ server.listen(port, () => {
         </div>
         <input class="inputMessage" placeholder="Type here..." />
       </li>
-      <li class="login page">
-        <div class="form">
-          <h3 class="title">What's your nickname?</h3>
-          <input class="usernameInput" type="text" maxlength="14" />
-        </div>
-      </li>
     </ul>
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="/faker.js"></script>
     <script src="/main.js"></script>
   </body>
 </html>
@@ -164,4 +159,4 @@ server.listen(port, () => {
 
 <br>
 
-## <p align="center"> <img height="600" src="https://memegenerator.net/img/instances/73957347/thank-you-for-listening-to-our-presentation.jpg"></p>
+## <p align="center"> <img src="https://i.imgur.com/O4DIM1F.png"></p>
