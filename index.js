@@ -15,12 +15,14 @@ let numUsers = 0;
 
 io.on("connection", (socket) => {
   console.log("a user connected");
-  ++numUsers;
-
+  let addedUser = false;
   // when the client emits 'add user', this listens and executes
   socket.on("add user", (data) => {
+    if (addedUser) return;
     socket.username = data.username;
     socket.avatar = data.avatar;
+    ++numUsers;
+    addedUser = true;
     io.emit("login", {
       numUsers: numUsers,
     });
@@ -44,11 +46,15 @@ io.on("connection", (socket) => {
   // when the user disconnects.. perform this
   socket.on("disconnect", () => {
     console.log("a user disconnected");
-    --numUsers;
-    socket.broadcast.emit("user left", {
-      username: socket.username,
-      numUsers: numUsers,
-    });
+    if (addedUser) {
+      --numUsers;
+
+      // echo globally that this client has left
+      socket.broadcast.emit("user left", {
+        username: socket.username,
+        numUsers: numUsers,
+      });
+    }
   });
 });
 
