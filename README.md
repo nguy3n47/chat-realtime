@@ -46,7 +46,7 @@ $ npm i --save socket.io
 ## **How to use**
 
 ### Sample code:
-
+### `Server`
 ```js
 io.on("connection", (socket) => {
   socket.emit("request" /* … */); // sending to sender-client only
@@ -56,6 +56,10 @@ io.on("connection", (socket) => {
     /* … */
   }); // event listener, can be called on client to execute on server
 });
+```
+### `Client`
+```js
+const socket = io("http://localhost:3000");
 ```
 
 ## **Setup**
