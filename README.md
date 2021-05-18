@@ -59,7 +59,10 @@ io.on("connection", (socket) => {
 ```
 ### `Client`
 ```js
-const socket = io("http://localhost:3000");
+<script src="socket.io/socket.io.js"></script>
+<script>
+  const socket = io("http://localhost:3000");
+</script>
 ```
 
 ## **Setup**
