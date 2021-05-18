@@ -157,6 +157,4 @@ server.listen(port, () => {
 
 [MIT](https://github.com/socketio/socket.io/blob/master/LICENSE)
 
-<br>
-
 ## <p align="center"> <img src="https://i.imgur.com/O4DIM1F.png"></p>
