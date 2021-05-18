@@ -37,9 +37,9 @@ $(() => {
   const addParticipantsMessage = (data) => {
     let message = 'Welcome to Socket.IO Chat – ';
     if (data.numUsers === 1) {
-      message += `there's 1 participant`;
+      message += `1 participant`;
     } else {
-      message += `there are ${data.numUsers} participants`;
+      message += `${data.numUsers} participants`;
     }
     const $el = $('<li>').addClass('log').text(message);
     if ($('.log')[0]) {
@@ -53,17 +53,22 @@ $(() => {
     addParticipantsMessage(data);
   });
 
-  socket.on('user joined', (data) => {
-    let message = `${data.username} joined`;
+  const log = (message) => {
     const $el = $('<li>').addClass('log').text(message);
     $messages.append($el);
+    $messages[0].scrollTop = $messages[0].scrollHeight;
+  };
+
+  socket.on('user joined', (data) => {
+    addParticipantsMessage(data);
+    let message = `${data.username} joined`;
+    log(message);
   });
 
   socket.on('user left', (data) => {
     addParticipantsMessage(data);
     let message = `${data.username} left`;
-    const $el = $('<li>').addClass('log').text(message);
-    $messages.append($el);
+    log(message);
   });
 
   // Sends a chat message
@@ -100,9 +105,7 @@ $(() => {
     addChatMessage(data);
   });
 
-  socket.on('disconnect', () => {
-    log('you have been disconnected');
-  });
+  socket.on('disconnect', () => {});
 
   // Click events
 

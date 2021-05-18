@@ -23,7 +23,7 @@ io.on('connection', (socket) => {
     socket.avatar = data.avatar;
     ++numUsers;
     addedUser = true;
-    io.emit('login', {
+    socket.emit('login', {
       numUsers: numUsers,
     });
 
