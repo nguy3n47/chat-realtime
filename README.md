@@ -147,7 +147,6 @@ server.listen(port, () => {
         <input class="inputMessage" placeholder="Type here..." />
       </li>
     </ul>
-
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/faker.js"></script>
