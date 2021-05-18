@@ -30,10 +30,10 @@ Here are the features provided by Socket.IO over plain WebSockets:
 
 - reliability (fallback to HTTP long-polling in case the WebSocket connection cannot be established)
 - automatic reconnection
-- packet buffering
-- acknowledgments
-- broadcasting to all clients or to a subset of clients (what we call “Room”)
-- multiplexing (what we call “Namespace”)
+- [packet buffering](https://socket.io/docs/v4/client-offline-behavior/#Buffered-events)
+- [acknowledgments](https://socket.io/docs/v4/emitting-events/#Acknowledgements)
+- broadcasting to all clients or [to a subset of clients](https://socket.io/docs/v4/rooms/) (what we call “Room”)
+- [multiplexing](https://socket.io/docs/v4/namespaces/) (what we call “Namespace”)
 
 # **Demo Chat App**
 
