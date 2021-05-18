@@ -58,7 +58,7 @@ io.on("connection", (socket) => {
 });
 ```
 ### `Client`
-```js
+```html
 <script src="socket.io/socket.io.js"></script>
 <script>
   const socket = io("http://localhost:3000");
