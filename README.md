@@ -1,4 +1,4 @@
-## <p align="center"> <img width="500" height="100" src="https://socket.io/css/images/logo.svg"></p>
+## <p align="center"> <img width="800" height="280" src="https://miro.medium.com/max/811/1*tOitxCwTNcS3ESstLylmtg.png"></p>
 
 # **Members**
 
